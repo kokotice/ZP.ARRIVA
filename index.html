@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Šalina</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+    <div class="logo">International Šalina</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#booking">Booking</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content reveal">
+        <h1>Historic Trams. Modern Standards.</h1>
+        <p>Fully operational vehicles from ČKD Tatra export fleet.</p>
+        <button class="primary-btn" onclick="scrollToFleet()">Explore Fleet</button>
+    </div>
+</section>
+
+<section id="fleet" class="section">
+    <h2 class="reveal">Available Fleet</h2>
+
+    <div class="tram-grid">
+
+        <div class="tram-card reveal" data-tram="KT8D5">
+            <h3>KT8D5</h3>
+            <span class="stock available">Available</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="KT8D5.RN2P">
+            <h3>KT8D5.RN2P</h3>
+            <span class="stock limited">Limited</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="KT8D5R.N2">
+            <h3>KT8D5R.N2</h3>
+            <span class="stock available">Available</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="T6A5.3">
+            <h3>T6A5.3</h3>
+            <span class="stock available">Available</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="K2S">
+            <h3>K2S</h3>
+            <span class="stock limited">Limited</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="K3P">
+            <h3>K3P</h3>
+            <span class="stock sold">Sold Out</span>
+        </div>
+
+        <div class="tram-card reveal" data-tram="KT4D">
+            <h3>KT4D</h3>
+            <span class="stock available">Available</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="booking" class="section light">
+    <h2 class="reveal">Request Booking</h2>
+
+    <form id="bookingForm" class="booking-form reveal">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <select id="tramSelect" required>
+            <option value="">Select Tram</option>
+            <option>KT8D5</option>
+            <option>KT8D5.RN2P</option>
+            <option>KT8D5R.N2</option>
+            <option>T6A5.3</option>
+            <option>K2S</option>
+            <option>K3P</option>
+            <option>KT4D</option>
+        </select>
+        <button type="submit" class="primary-btn">Submit Request</button>
+        <p id="formMessage"></p>
+    </form>
+</section>
+
+<footer>
+    © 2026 International Šalina – Professional Tram Solutions
+</footer>
+
+<div id="tramModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

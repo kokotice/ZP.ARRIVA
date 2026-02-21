@@ -1,0 +1,186 @@
+:root {
+    --primary: #00a651;
+    --gradient: linear-gradient(135deg, #00a651, #007f3f);
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar.scrolled a {
+    color: #222;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar.scrolled .logo {
+    color: var(--primary);
+}
+
+.hero {
+    height: 100vh;
+    background: url("https://static.bmhd.cz/data/f/127/1266/126538.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+}
+
+.primary-btn {
+    background: var(--gradient);
+    border: none;
+    padding: 14px 30px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 120px 40px 80px;
+    text-align: center;
+}
+
+.section.light {
+    background: white;
+}
+
+.tram-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tram-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tram-card:hover {
+    transform: translateY(-10px);
+}
+
+.stock {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.available { background: #d4f8e8; color: #00a651; }
+.limited { background: #fff4cc; color: #cc8800; }
+.sold { background: #ffd6d6; color: #cc0000; }
+
+.booking-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: #111;
+    color: #ccc;
+    padding: 30px;
+    text-align: center;
+}
